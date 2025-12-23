@@ -1,7 +1,6 @@
 import re
 import string
 import pandas as pd
-import matplotlib.pyplot as plt
 
 import nltk
 nltk.download('punkt_tab')

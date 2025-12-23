@@ -39,6 +39,6 @@ jobs:
         run: |
           git config --global user.name ${{ secrets.USERNAME }}
           git config --global user.email ${{ secrets.EMAIL }}
-          git add preprocessing/prdectid_preprocessing.csv
+          git add prdectid_preprocessing.csv
           git commit -m "[Auto] $(date) Data updated and preprocessed"
           git push origin main

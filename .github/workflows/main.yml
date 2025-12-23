@@ -12,6 +12,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: production
+    permissions:
+      contents: write
  
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE
@@ -40,5 +42,5 @@ jobs:
           git config --global user.name ${{ secrets.USERNAME }}
           git config --global user.email ${{ secrets.EMAIL }}
           git add preprocessing/prdectid_preprocessing.csv
-          git commit -m "[$(date)] Automatic data update" || true
+          git commit -m "[$(date)] Automatic data update"
           git push origin main

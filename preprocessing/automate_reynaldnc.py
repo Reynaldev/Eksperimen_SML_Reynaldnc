@@ -92,5 +92,10 @@ def load_data():
 
     df = df[["review_akhir", "Sentiment"]]
     df = df.drop_duplicates()
+    df = df[df["review_akhir"].str.len() > 0]
 
     return df
+
+if __name__ == "__main__":
+    df = load_data()
+    df.to_csv("prdectid_preprocessing.csv", index=False)

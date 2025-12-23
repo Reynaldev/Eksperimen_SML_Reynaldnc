@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.12.7"
  
-      # Save models to GitHub Repository
+      # Preprocess data. The data will be stored in preprocessing/prdectid_preprocessing.csv
       - name: Preprocess dataset
         run: |
           cd preprocessing
